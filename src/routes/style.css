@@ -1,0 +1,21 @@
+html,
+body {
+	overscroll-behavior: none;
+}
+
+html {
+	line-height: 1.25;
+	-webkit-text-size-adjust: 100%;
+	overflow-wrap: anywhere;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
