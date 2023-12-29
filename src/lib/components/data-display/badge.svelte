@@ -2,9 +2,6 @@
 	import type { HTMLAttributes } from 'svelte/elements'
 
 	type Variant = 'primary' | 'secondary' | 'overlay'
-	let className: string | undefined | null = undefined
-	export { className as class }
-	export let variant: Variant = 'primary'
 
 	interface Props extends HTMLAttributes<HTMLSpanElement> {
 		variant?: Variant
@@ -12,6 +9,10 @@
 	}
 
 	type $$Props = Props
+
+	export let variant: $$Props['variant'] = 'primary'
+	let className: $$Props['class'] = undefined
+	export { className as class }
 </script>
 
 <span class={`badge ${variant} small-sans ${className}`} {...$$restProps}>

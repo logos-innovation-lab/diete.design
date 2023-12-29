@@ -1,13 +1,6 @@
 <script lang="ts">
 	import type { HTMLInputAttributes } from 'svelte/elements'
 
-	export let value = ''
-	export let placeholder: string | undefined | null = undefined
-	export let autofocus: boolean | undefined | null = false
-	export let disabled: boolean | undefined | null = false
-	export let label: string | undefined | null = undefined
-	export let unit: string | undefined | null = undefined
-
 	interface Props extends HTMLInputAttributes {
 		disabled?: boolean | null
 		label?: string | null
@@ -16,6 +9,13 @@
 	}
 
 	type $$Props = Props
+
+	export let value = ''
+	export let placeholder: $$Props['placeholder'] = undefined
+	export let autofocus: $$Props['autofocus'] = false
+	export let disabled: $$Props['disabled'] = false
+	export let label: $$Props['label'] = undefined
+	export let unit: $$Props['unit'] = undefined
 </script>
 
 <label class:disabled>

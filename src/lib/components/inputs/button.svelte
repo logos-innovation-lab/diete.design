@@ -4,13 +4,31 @@
 
 	type Variant = 'primary' | 'secondary' | 'overlay'
 
-	let className: string | undefined | null = undefined
+	type Props = {
+		class?: string | null
+		variant?: Variant
+		active?: boolean
+	}
+
+	interface AnchorElement extends Props, HTMLAnchorAttributes {
+		href?: HTMLAnchorAttributes['href']
+		type?: never
+	}
+
+	interface ButtonElement extends Props, HTMLButtonAttributes {
+		type?: HTMLButtonAttributes['type']
+		href?: never
+	}
+
+	type $$Props = AnchorElement | ButtonElement
+
+	let className: $$Props['class'] = undefined
 	export { className as class }
-	export let href: HTMLAnchorAttributes['href'] = undefined
-	export let type: HTMLButtonAttributes['type'] = undefined
-	export let role: HTMLButtonAttributes['role'] = undefined
-	export let variant: Variant = 'secondary'
-	export let active: boolean = false
+	export let href: $$Props['href'] = undefined
+	export let type: $$Props['type'] = undefined
+	export let role: $$Props['role'] = undefined
+	export let variant: $$Props['variant'] = 'secondary'
+	export let active: $$Props['active'] = false
 
 	let buttonElement: HTMLButtonElement | HTMLAnchorElement
 	let singleSVG = false
@@ -33,24 +51,6 @@
 			singleSVG = true
 		}
 	})
-
-	type Props = {
-		class?: string | null
-		variant?: Variant
-		active?: boolean
-	}
-
-	interface AnchorElement extends Props, HTMLAnchorAttributes {
-		href?: HTMLAnchorAttributes['href']
-		type?: never
-	}
-
-	interface ButtonElement extends Props, HTMLButtonAttributes {
-		type?: HTMLButtonAttributes['type']
-		href?: never
-	}
-
-	type $$Props = AnchorElement | ButtonElement
 </script>
 
 <svelte:element

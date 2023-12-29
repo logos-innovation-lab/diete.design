@@ -16,11 +16,6 @@
 		| 'serif-italic'
 	type Element = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span'
 
-	let className: string | undefined | null = undefined
-	export { className as class }
-	export let variant: Variant = 'serif'
-	export let element: Element = 'span'
-
 	type Props = {
 		class?: string | null
 		variant?: Variant
@@ -28,6 +23,11 @@
 	}
 
 	type $$Props = (HTMLAttributes<HTMLHeadingElement> | HTMLAttributes<HTMLSpanElement>) & Props
+
+	let className: $$Props['class'] = undefined
+	export { className as class }
+	export let variant: $$Props['variant'] = 'serif'
+	export let element: $$Props['element'] = 'span'
 </script>
 
 <svelte:element this={element} class={`${variant} ${className}`} {...$$restProps}>

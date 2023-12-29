@@ -3,7 +3,7 @@
 
 	type $$Props = IconProps
 
-	export let size = 20
+	export let size: $$Props['size'] = 20
 </script>
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width={size} height={size}>
