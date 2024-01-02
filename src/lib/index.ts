@@ -13,6 +13,7 @@ export { default as Dropdown } from './components/inputs/dropdown.svelte'
 export { default as DropdownItem } from './components/inputs/dropdown-item.svelte'
 
 export { default as Theme } from './theme.svelte'
+export type { ThemeStore } from './stores/theme'
 export type { DarkModeOption } from './types'
 
 // Icons

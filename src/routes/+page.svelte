@@ -1,16 +1,25 @@
 <script lang="ts">
-	import { Badge, Button, Theme, Typography, Container, type DarkModeOption } from '$lib'
-	import Dropdown from '$lib/components/inputs/dropdown.svelte'
-	import DropdownItem from '$lib/components/inputs/dropdown-item.svelte'
-	import InputText from '$lib/components/inputs/input-text.svelte'
-	import Asleep from '$lib/icons/asleep.svelte'
-	import CaretDown from '$lib/icons/caret-down.svelte'
-	import CheckmarkFilled from '$lib/icons/checkmark-filled.svelte'
-	import Checkmark from '$lib/icons/checkmark.svelte'
-	import ChevronRight from '$lib/icons/chevron-right.svelte'
-	import Close from '$lib/icons/close.svelte'
-	import Light from '$lib/icons/light.svelte'
-	import type { ThemeStore } from '$lib/stores/theme'
+	import {
+		Badge,
+		Button,
+		Theme,
+		Typography,
+		Container,
+		InputText,
+		Dropdown,
+		DropdownItem,
+		type DarkModeOption,
+		type ThemeStore,
+	} from '$lib'
+	import {
+		Asleep,
+		CaretDown,
+		CheckmarkFilled,
+		Checkmark,
+		ChevronRight,
+		Close,
+		Light,
+	} from '$lib/icons'
 	import InputPalette from './components/input-palette.svelte'
 
 	let darkMode: DarkModeOption = 'light'
