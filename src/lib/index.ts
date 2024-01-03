@@ -15,11 +15,3 @@ export { default as DropdownItem } from './components/inputs/dropdown-item.svelt
 export { default as Theme } from './theme.svelte'
 export type { ThemeStore } from './stores/theme'
 export type { DarkModeOption } from './types'
-
-// Icons
-import AddComment from './icons/add-comment.svelte'
-import Add from './icons/add.svelte'
-import ArrowDownRight from './icons/arrow-down-right.svelte'
-import ArrowRight from './icons/arrow-right.svelte'
-
-export { AddComment, Add, ArrowDownRight, ArrowRight }
