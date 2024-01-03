@@ -5,7 +5,6 @@
 		disabled?: boolean | null
 		label?: string | null
 		unit?: string | null
-		class?: string | null
 	}
 
 	type $$Props = Props

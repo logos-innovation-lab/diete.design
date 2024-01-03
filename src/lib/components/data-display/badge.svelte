@@ -5,7 +5,6 @@
 
 	interface Props extends HTMLAttributes<HTMLSpanElement> {
 		variant?: Variant
-		class?: string | null
 	}
 
 	type $$Props = Props

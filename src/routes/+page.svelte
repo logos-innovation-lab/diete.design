@@ -19,6 +19,49 @@
 		ChevronRight,
 		Close,
 		Light,
+		Add,
+		AddComment,
+		ArrowDownRight,
+		ArrowRight,
+		ArrowUp,
+		ArrowUpRight,
+		ArrowsVertical,
+		Bullhorn,
+		Camera,
+		ChatBot,
+		ChatLaunch,
+		ChevronDown,
+		ChevronLeft,
+		ChevronUp,
+		Copy,
+		CopyLink,
+		DataBlob,
+		DataViewAlt,
+		DocumentSigned,
+		Edit,
+		Events,
+		Explore,
+		Home,
+		IBMWatsonxAssistant,
+		Information,
+		Launch,
+		Login,
+		Logout,
+		PaintPalette,
+		Pending,
+		QrCode,
+		Receipt,
+		Renew,
+		Search,
+		Settings,
+		SettingsAdjust,
+		SettingsView,
+		ShowDataCards,
+		TrashCan,
+		User,
+		UserFollow,
+		Wallet,
+		WarningAltFilled,
 	} from '$lib/icons'
 	import InputPalette from './components/input-palette.svelte'
 
@@ -205,11 +248,65 @@
 					</Dropdown>
 				</div>
 			</div>
+
+			<Typography variant="h2" element="h1">Icons</Typography>
+			<div class="row gap svg">
+				<AddComment />
+				<Add />
+				<ArrowDownRight />
+				<ArrowRight />
+				<Login />
+				<ChatBot />
+				<Light />
+				<Asleep />
+				<CopyLink />
+				<ChevronUp />
+				<ArrowUpRight />
+				<ArrowUp />
+				<Receipt />
+				<Wallet />
+				<Close />
+				<User />
+				<Pending />
+				<Logout />
+				<CheckmarkFilled />
+				<CaretDown />
+				<Events />
+				<QrCode />
+				<PaintPalette />
+				<ChevronLeft />
+				<Checkmark />
+				<Bullhorn />
+				<ChevronDown />
+				<TrashCan />
+				<Settings />
+				<Edit />
+				<Camera />
+				<WarningAltFilled />
+				<Renew />
+				<ArrowsVertical />
+				<ChevronRight />
+				<DataViewAlt />
+				<SettingsAdjust />
+				<Copy />
+				<SettingsView />
+				<ChatLaunch />
+				<ShowDataCards />
+				<UserFollow />
+				<Launch />
+				<DocumentSigned />
+				<DataBlob />
+				<Search />
+				<Explore />
+				<Home />
+				<Information />
+				<IBMWatsonxAssistant />
+			</div>
 		</Container>
 	</div>
 </Theme>
 
-<style>
+<style lang='scss'>
 	.row {
 		display: flex;
 		flex-direction: row;
@@ -260,5 +357,10 @@
 	.colors {
 		flex-grow: 1;
 		background-color: var(--color-base);
+	}
+	.svg {
+		:global(svg) {
+			fill: var(--color-accent)
+		}
 	}
 </style>

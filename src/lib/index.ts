@@ -9,8 +9,10 @@ export { default as Grid } from './components/layout/grid.svelte'
 // Data Display
 export { default as Badge } from './components/data-display/badge.svelte'
 export { default as Typography } from './components/data-display/typography.svelte'
-export { default as Dropdown } from './components/inputs/dropdown.svelte'
-export { default as DropdownItem } from './components/inputs/dropdown-item.svelte'
+import { default as Dropdown } from './components/inputs/dropdown.svelte'
+import { default as DropdownItem } from './components/inputs/dropdown-item.svelte'
+export { Dropdown, DropdownItem }
+export { default as Loading } from './components/data-display/loading.svelte'
 
 export { default as Theme } from './theme.svelte'
 export type { ThemeStore } from './stores/theme'

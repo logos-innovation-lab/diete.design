@@ -56,11 +56,13 @@
 <svelte:element
 	this={href ? 'a' : 'button'}
 	bind:this={buttonElement}
-	class:icon={singleSVG}
 	type={href ? undefined : type}
 	role={role ?? href ? 'link' : 'button'}
 	{href}
-	class={`${variant} ${className} ${active ? 'active' : ''}`}
+	class:icon={singleSVG}
+	class:active
+	class:variant
+	class={`${variant} ${className}`}
 	{...$$restProps}
 	on:click
 	on:change
