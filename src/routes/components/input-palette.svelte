@@ -1,12 +1,12 @@
 <script lang="ts">
-	import PaintPalette from '$lib/icons/paint-palette.svelte'
+	import { ColorPalette } from 'carbon-icons-svelte'
 	export let color: string
 </script>
 
 <label>
 	<div class="palette-overlay" />
 	<div class="palette-icon">
-		<PaintPalette />
+		<ColorPalette />
 	</div>
 	<input type="color" bind:value={color} />
 </label>

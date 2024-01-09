@@ -10,6 +10,7 @@
 		DropdownItem,
 		type DarkModeOption,
 		type ThemeStore,
+		Checkbox,
 	} from '$lib'
 	import {
 		Asleep,
@@ -19,50 +20,7 @@
 		ChevronRight,
 		Close,
 		Light,
-		Add,
-		AddComment,
-		ArrowDownRight,
-		ArrowRight,
-		ArrowUp,
-		ArrowUpRight,
-		ArrowsVertical,
-		Bullhorn,
-		Camera,
-		ChatBot,
-		ChatLaunch,
-		ChevronDown,
-		ChevronLeft,
-		ChevronUp,
-		Copy,
-		CopyLink,
-		DataBlob,
-		DataViewAlt,
-		DocumentSigned,
-		Edit,
-		Events,
-		Explore,
-		Home,
-		IBMWatsonxAssistant,
-		Information,
-		Launch,
-		Login,
-		Logout,
-		PaintPalette,
-		Pending,
-		QrCode,
-		Receipt,
-		Renew,
-		Search,
-		Settings,
-		SettingsAdjust,
-		SettingsView,
-		ShowDataCards,
-		TrashCan,
-		User,
-		UserFollow,
-		Wallet,
-		WarningAltFilled,
-	} from '$lib/icons'
+	} from 'carbon-icons-svelte'
 	import InputPalette from './components/input-palette.svelte'
 
 	let darkMode: DarkModeOption = 'light'
@@ -228,6 +186,7 @@
 				<div class="column border padding">
 					<InputText placeholder="placeholder" label="Input label" disabled />
 					<InputText placeholder="placeholder" label="Input label" />
+					<InputText placeholder="placeholder" label="Input label" unit="Kg" />
 				</div>
 			</div>
 
@@ -249,64 +208,15 @@
 				</div>
 			</div>
 
-			<Typography variant="h2" element="h1">Icons</Typography>
-			<div class="row gap svg">
-				<AddComment />
-				<Add />
-				<ArrowDownRight />
-				<ArrowRight />
-				<Login />
-				<ChatBot />
-				<Light />
-				<Asleep />
-				<CopyLink />
-				<ChevronUp />
-				<ArrowUpRight />
-				<ArrowUp />
-				<Receipt />
-				<Wallet />
-				<Close />
-				<User />
-				<Pending />
-				<Logout />
-				<CheckmarkFilled />
-				<CaretDown />
-				<Events />
-				<QrCode />
-				<PaintPalette />
-				<ChevronLeft />
-				<Checkmark />
-				<Bullhorn />
-				<ChevronDown />
-				<TrashCan />
-				<Settings />
-				<Edit />
-				<Camera />
-				<WarningAltFilled />
-				<Renew />
-				<ArrowsVertical />
-				<ChevronRight />
-				<DataViewAlt />
-				<SettingsAdjust />
-				<Copy />
-				<SettingsView />
-				<ChatLaunch />
-				<ShowDataCards />
-				<UserFollow />
-				<Launch />
-				<DocumentSigned />
-				<DataBlob />
-				<Search />
-				<Explore />
-				<Home />
-				<Information />
-				<IBMWatsonxAssistant />
+			<Typography variant="h2" element="h1">Checkbox</Typography>
+			<div class="row gap">
+				<Checkbox />
 			</div>
 		</Container>
 	</div>
 </Theme>
 
-<style lang='scss'>
+<style lang="scss">
 	.row {
 		display: flex;
 		flex-direction: row;
@@ -360,7 +270,7 @@
 	}
 	.svg {
 		:global(svg) {
-			fill: var(--color-accent)
+			fill: var(--color-accent);
 		}
 	}
 </style>
