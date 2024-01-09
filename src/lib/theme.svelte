@@ -101,6 +101,11 @@
 
 		--max-width: 498px;
 
+		font-size: var(--font-size-sans);
+		font-weight: var(--font-weight-sans);
+		font-family: var(--font-sans);
+		line-height: var(--line-height-sans);
+
 		:global(h1),
 		:global(.h1) {
 			font-size: var(--font-size-h1);

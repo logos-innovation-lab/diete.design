@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { HTMLInputAttributes } from 'svelte/elements'
 
-	interface Props extends HTMLInputAttributes {
+	interface Props extends Omit<HTMLInputAttributes, 'type'> {
 		disabled?: boolean | null
 		label?: string | null
 		unit?: string | null
@@ -9,9 +9,9 @@
 
 	type $$Props = Props
 
-	export let value = ''
-	export let placeholder: $$Props['placeholder'] = undefined
-	export let autofocus: $$Props['autofocus'] = false
+	let className: $$Props['class'] = undefined
+	export { className as class }
+	export let value: $$Props['value'] = undefined
 	export let disabled: $$Props['disabled'] = false
 	export let label: $$Props['label'] = undefined
 	export let unit: $$Props['unit'] = undefined
@@ -22,14 +22,11 @@
 		<span class="small-sans label">{label}</span>
 	{/if}
 	<div class="input-wrapper">
-		<!-- svelte-ignore a11y-autofocus -->
 		<input
-			style={`padding-right: ${unit ? 'calc(var(--spacing-12) + 2em)' : 'var(--spacing-12)'};`}
-			class="large-sans"
+			class:unit={Boolean(unit)}
+			class={`large-sans ${className}`}
 			type="text"
 			{disabled}
-			{autofocus}
-			{placeholder}
 			bind:value
 			{...$$restProps}
 			on:keydown
@@ -72,6 +69,9 @@
 		top: 50%;
 		transform: translateY(-50%);
 		pointer-events: none; // Ensure the input behind is still clickable
+	}
+	.unit {
+		padding-right: calc(var(--spacing-12) + 2em);
 	}
 
 	input {
